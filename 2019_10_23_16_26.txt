@@ -1,7 +1,0 @@
-New game!!
-!!Игрокchanged score 20
-!!Игрокchanged score -10
-!!Игрокchanged score 40
-!!Игрокfinal score -10
-!!Игрокfinal score 40
-!!Игрокfinal score 20

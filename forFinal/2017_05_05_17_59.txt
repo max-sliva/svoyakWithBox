@@ -1,7 +1,0 @@
-New game!!
-!!Игрок1changed score -20
-!!Игрок2changed score 20
-!!Игрок2changed score -10
-!!Игрок1changed score 0
-!!Игрок1final score 0
-!!Игрок2final score -10

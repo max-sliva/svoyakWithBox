@@ -1,1 +1,0 @@
-java -jar svoyak2.jar

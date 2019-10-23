@@ -1,7 +1,0 @@
-New game!!
-!!Игрок3changed score 50
-!!Игрок2changed score -50
-!!Игрок1changed score 50
-!!Игрок1final score 50
-!!Игрок2final score -50
-!!Игрок3final score 50
