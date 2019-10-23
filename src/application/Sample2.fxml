@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" prefHeight="578.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+         <items>
+            <GridPane fx:id="titlesVbox" alignment="CENTER" minWidth="200.0" onContextMenuRequested="#showContextMenu" prefWidth="387.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+            </GridPane>
+            <StackPane fx:id="stackPane" blendMode="SRC_ATOP" prefWidth="0.0" style="-fx-border-color: red;">
+               <children>
+                  <Label fx:id="labelQuest" onMouseClicked="#handleClick" text="Label" visible="false" wrapText="true">
+                     <StackPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </StackPane.margin></Label>
+                  <GridPane fx:id="gridTable" alignment="CENTER" gridLinesVisible="true" prefHeight="449.0" prefWidth="707.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+                  <MediaView fx:id="mediaView" disable="true" fitHeight="400.0" fitWidth="400.0" onContextMenuRequested="#mediaRightClick" onMouseClicked="#handleClick" visible="false" StackPane.alignment="CENTER">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </MediaView>
+                  <ImageView fx:id="imageView" disable="true" fitHeight="357.0" fitWidth="437.0" onMouseClicked="#handleClick" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: brown;" visible="false">
+                     <image>
+                        <Image url="@../../musik.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </items>
+      </SplitPane>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar fx:id="toolBar" prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button fx:id="newGame" mnemonicParsing="false" text="Новая игра" />
+                  <CheckBox fx:id="secondWindow" disable="true" mnemonicParsing="false" onAction="#secondWindowCheck" text="2-ое окно" />
+                  <CheckBox fx:id="statCheck" disable="true" mnemonicParsing="false" onAction="#statSwitch" text="Статистика" />
+                  <CheckBox fx:id="statCheck2" disable="true" mnemonicParsing="false" text="Статистика на 2-м окне" />
+                  <Button fx:id="fontPlus" mnemonicParsing="false" onAction="#handleFontPlus" prefHeight="31.0" prefWidth="79.0" text="+" />
+                  <Label text="Шрифт" />
+                  <Button fx:id="fontMinus" mnemonicParsing="false" onAction="#handleFontMinus" prefHeight="31.0" prefWidth="73.0" text="-" />
+                  <CheckBox fx:id="questOn2nd" disable="true" mnemonicParsing="false" selected="true" text="Вопрос на др.окне" />
+                  <Button fx:id="connBox" mnemonicParsing="false" onAction="#handleConnBox" text="conn" />
+              </items>
+            </ToolBar>
+            <ToolBar fx:id="statBar" prefHeight="49.0" prefWidth="719.0">
+               <items>
+                  <Label fx:id="player1" alignment="CENTER_RIGHT" prefHeight="21.0" text="Label" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Spinner fx:id="spinner1" editable="true" maxHeight="1.7976931348623157E308" onInputMethodTextChanged="#handleScoreChanged" onMouseClicked="#handleScoreChanged" prefHeight="39.0" prefWidth="75.0" />
+                  <Label fx:id="player2" alignment="CENTER_RIGHT" prefHeight="21.0" text="Label" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Spinner fx:id="spinner2" maxHeight="1.7976931348623157E308" onInputMethodTextChanged="#handleScoreChanged" onMouseClicked="#handleScoreChanged" prefHeight="39.0" prefWidth="77.0" />
+                  <Label fx:id="player3" alignment="CENTER_RIGHT" prefHeight="21.0" text="Label" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Spinner fx:id="spinner3" maxHeight="1.7976931348623157E308" onInputMethodTextChanged="#handleScoreChanged" onMouseClicked="#handleScoreChanged" prefHeight="39.0" prefWidth="84.0" />
+                  <Label fx:id="player4" alignment="CENTER_RIGHT" prefHeight="21.0" text="Label" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Spinner fx:id="spinner4" maxHeight="1.7976931348623157E308" onInputMethodTextChanged="#handleScoreChanged" onMouseClicked="#handleScoreChanged" prefHeight="39.0" prefWidth="73.0" />
+                  <Label fx:id="questLabel" maxWidth="1.7976931348623157E308" prefHeight="17.0" wrapText="true" />
+               </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#videoSizeClick" prefHeight="22.0" prefWidth="55.0" text="+" />
+            <Label alignment="CENTER" minWidth="-Infinity" prefHeight="14.0" text="Размер видео/изображения" textAlignment="CENTER" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#videoSizeClick" prefHeight="22.0" prefWidth="54.0" text="-" />
+            <Label fx:id="labelAnswer" alignment="CENTER" contentDisplay="RIGHT" prefHeight="21.0" prefWidth="671.0" style="-fx-text-fill: grey;" text="Ответ: " textAlignment="RIGHT" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

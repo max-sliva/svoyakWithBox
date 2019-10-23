@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SecondController">
+   <center>
+      <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+         <items>
+            <GridPane fx:id="titlesVbox" alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </GridPane>
+            <StackPane fx:id="stackPane" blendMode="SRC_ATOP" style="-fx-border-color: red;">
+               <children>
+                  <Label fx:id="labelQuest" text="Label" visible="false" wrapText="true">
+                     <StackPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </StackPane.margin></Label>
+                  <GridPane fx:id="gridTable" alignment="CENTER" gridLinesVisible="true" prefHeight="314.0" prefWidth="400.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+                  <MediaView fx:id="mediaView" disable="true" fitHeight="400.0" fitWidth="400.0" visible="false" StackPane.alignment="CENTER">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </MediaView>
+                  <ImageView fx:id="imageView" disable="true" fitHeight="357.0" fitWidth="437.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: brown;" visible="false" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../musik.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </items>
+      </SplitPane>
+   </center>
+   <top>
+      <ToolBar fx:id="statBar" prefHeight="56.0" prefWidth="800.0">
+         <items>
+            <Label fx:id="player1" alignment="CENTER_RIGHT" text="Label" textAlignment="RIGHT">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <TextField fx:id="scorePlayer1" prefHeight="25.0" prefWidth="86.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label fx:id="player2" alignment="CENTER_RIGHT" text="Label" textAlignment="RIGHT">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <TextField fx:id="scorePlayer2" prefHeight="25.0" prefWidth="87.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label fx:id="player3" alignment="CENTER_RIGHT" text="Label" textAlignment="RIGHT">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <TextField fx:id="scorePlayer3" prefHeight="25.0" prefWidth="91.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label fx:id="player4" alignment="CENTER_RIGHT" text="Label" textAlignment="RIGHT">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <TextField fx:id="scorePlayer4" prefHeight="25.0" prefWidth="91.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label fx:id="questLabel" maxWidth="1.7976931348623157E308" prefHeight="17.0" wrapText="true" />
+         </items>
+      </ToolBar>
+   </top>
+</BorderPane>

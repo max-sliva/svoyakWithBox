@@ -1,0 +1,18 @@
+New game!!
+!!Игрок3changed score 50
+!!Игрок2changed score 40
+!!Игрок3changed score 70
+!!Игрок1changed score -30
+!!Игрок2changed score 70
+!!Игрок2changed score 80
+!!Игрок2changed score 90
+!!Игрок3changed score 100
+!!Игрок3changed score 110
+!!Игрок1changed score -70
+!!Игрок3changed score 150
+!!Игрок3changed score 160
+!!Игрок2changed score 110
+!!Игрок2changed score 160
+!!Игрок1final score -70
+!!Игрок2final score 160
+!!Игрок3final score 160

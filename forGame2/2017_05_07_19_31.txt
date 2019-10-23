@@ -1,0 +1,3 @@
+New game!!
+!!Игрок1final score 0
+!!Игрок2final score 0

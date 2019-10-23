@@ -1,0 +1,3 @@
+start javaw -jar svoyak2.jar
+//или 
+//java -jar test.jar
